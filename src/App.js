@@ -15,18 +15,22 @@ function App() {
     <Router>
     <div className="App">
       <Header />
-      
+
         <br />
         <Route exact path = "/" component={Landing}/>
-        <Route exact path = "/addproduct" component={AddProduct}/>
+
+        <Route exact path = "/addproduct">
+          <AddProduct data={[{name:"milk",description:"dairy"}]}/>
+        </Route>
+
         <Route exact path = "/register" component={Register}/>
         <Route exact path = "/login" component={Login}/>
         <Route exact path = "/farmerlogin" component={FarmerLogin}/>
      </div>
      </Router>
- 
+
 );
-  
+
 }
 
 export default App;
