@@ -5,13 +5,14 @@ const Schema = mongoose.Schema;
 const farmproductSchema = new Schema({
     name: {
     type:String,
-    reuqired: true,
+    required: true,
     unique:true
     },
     description: {
     type:String,
-    reuqired: true
+    required: true
     }
+    
 },{
     timestamp: true,
 });
