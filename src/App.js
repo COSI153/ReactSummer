@@ -9,6 +9,7 @@ import AddProduct from './Components/Product/AddProduct';
 import "bootstrap/dist/css/bootstrap.min.css"
 import Header from './Components/Layout/Header';
 import './App.css';
+import Counter from './Components/Cart/counter';
 
 function App() {
   return (
@@ -26,6 +27,7 @@ function App() {
         <Route exact path = "/register" component={Register}/>
         <Route exact path = "/login" component={Login}/>
         <Route exact path = "/farmerlogin" component={FarmerLogin}/>
+        <Route exact path = "/counter" component={Counter}/>
      </div>
      </Router>
 

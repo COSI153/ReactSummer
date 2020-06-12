@@ -3,9 +3,11 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
-import Counter from './Components/Counter/counter';
+import Counter from './Components/Cart/counter';
+import 'bootstrap/dist/css/bootstrap.css';
+import Counters from './Components/Cart/counters';
  
-ReactDOM.render(
+ReactDOM.render( 
   <React.StrictMode>
     <App />
   </React.StrictMode>,
