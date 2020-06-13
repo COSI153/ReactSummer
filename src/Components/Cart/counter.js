@@ -6,7 +6,12 @@ class Counter extends Component {
     }
 
     styles = {
-        fontSize : 13,
+        fontSize : 20,
+        fontWeight : 'bold'
+    };
+
+    styleNumber = {
+        fontSize: 25,
         fontWeight : 'bold'
     };
 
@@ -14,11 +19,16 @@ class Counter extends Component {
         this.setState({count: this.state.count+1});
     };
 
+    handleDecrement = () =>{
+        this.setState({count: this.state.count-1});
+    }
+
     render() { 
         return( 
             <div>
-                <span style={this.styles} className="badge badge-primary m-2">{this.state.count}</span>
-                <button style={this.styles} onClick={this.handleIncrement} className="btn btn-secondary btn-sm"> Increment </button>
+                <button style={this.styles} onClick={this.handleDecrement} className="btn btn-secondary btn-sm"> - </button>
+                <span style={this.styleNumber} className="badge badge-primary m-3">{this.state.count}</span>
+                <button style={this.styles} onClick={this.handleIncrement} className="btn btn-secondary btn-sm"> + </button>
             </div> 
         );  
     }
