@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 
 class Counter extends Component {
     state = { 
-        count : 0
+        value : this.props.value
     }
 
     styles = {
@@ -16,18 +16,19 @@ class Counter extends Component {
     };
 
     handleIncrement = () => {
-        this.setState({count: this.state.count+1});
+        this.setState({count: this.state.value+1});
     };
 
     handleDecrement = () =>{
-        this.setState({count: this.state.count-1});
+        this.setState({count: this.state.value-1});
     }
 
     render() { 
         return( 
             <div>
+                {this.props.children}
                 <button style={this.styles} onClick={this.handleDecrement} className="btn btn-secondary btn-sm"> - </button>
-                <span style={this.styleNumber} className="badge badge-primary m-3">{this.state.count}</span>
+                <span style={this.styleNumber} className="badge badge-primary m-3">{this.state.value}</span>
                 <button style={this.styles} onClick={this.handleIncrement} className="btn btn-secondary btn-sm"> + </button>
             </div> 
         );  
