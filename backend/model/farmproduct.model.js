@@ -11,6 +11,9 @@ const farmproductSchema = new Schema({
     description: {
     type:String,
     required: true
+    },
+    date: {
+    type:Date
     }
     
 },{
