@@ -10,6 +10,11 @@ import "bootstrap/dist/css/bootstrap.min.css"
 import Header from './Components/Layout/Header';
 import LandingPage from './Components/Layout/LandingPage.js';
 import './App.css';
+// import Counter from './Components/ShoppingCart/counter';
+// import Counters from './Components/ShoppingCart/counters';
+// import Navbar from './Components/ShoppingCart/navbar';
+import Collection from './Components/ShoppingCart/collection';
+
 function App() {
   return (
     <Router>
@@ -22,11 +27,12 @@ function App() {
         <Route exact path = "/login" component={LoginPage}/>
        
         <Route exact path = "/farmerlogin" component={FarmerLogin}/>
+        <Route exact path = "/collection" component={Collection}/>
      </div>
      </Router>
- 
+
 );
-  
+
 }
 
 export default App;
