@@ -9,7 +9,10 @@ import AddProduct from './Components/Product/AddProduct';
 import "bootstrap/dist/css/bootstrap.min.css"
 import Header from './Components/Layout/Header';
 import './App.css';
-import Counter from './Components/Cart/counter';
+import Counter from './Components/ShoppingCart/counter';
+import Counters from './Components/ShoppingCart/counters';
+import Navbar from './Components/ShoppingCart/navbar';
+import Collection from './Components/ShoppingCart/collection';
 
 function App() {
   return (
@@ -19,7 +22,6 @@ function App() {
 
         <br />
         <Route exact path = "/" component={Landing}/>
-
         <Route exact path = "/addproduct">
           <AddProduct data={[{name:"milk",description:"dairy"}]}/>
         </Route>
@@ -27,7 +29,7 @@ function App() {
         <Route exact path = "/register" component={Register}/>
         <Route exact path = "/login" component={Login}/>
         <Route exact path = "/farmerlogin" component={FarmerLogin}/>
-        <Route exact path = "/counter" component={Counter}/>
+        <Route exact path = "/collection" component={Collection}/>
      </div>
      </Router>
 

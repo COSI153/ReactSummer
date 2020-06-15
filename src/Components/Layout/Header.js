@@ -25,8 +25,9 @@ export default class Header extends Component {
         <Link to="/"> Home &nbsp;&nbsp;  </Link>
         <Link to="#"> About &nbsp;&nbsp;  </Link>
         <Link to="addproduct"> Add products &nbsp;&nbsp;  </Link>
-        <Link to="#"> Shopping cart &nbsp;&nbsp;  </Link>
+        <Link to="collection"> Shopping cart &nbsp;&nbsp;  </Link>
         <Link to="login">  Farmer login </Link>
+
 
       </div>
     );

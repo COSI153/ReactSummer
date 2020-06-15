@@ -27,15 +27,13 @@ class Counter extends Component {
         return( 
             <div>
                 {this.props.children}
-                <button style={this.styles} onClick={this.handleDecrement} className="btn btn-secondary btn-sm"> - </button>
+                <button style={this.styles} onClick={this.handleDecrement} className="btn btn-secondary btn-sm">-</button>
                 <span style={this.styleNumber} className="badge badge-primary m-3">{this.state.value}</span>
-                <button style={this.styles} onClick={this.handleIncrement} className="btn btn-secondary btn-sm"> + </button>
+                <button style={this.styles} onClick={this.handleIncrement} className="btn btn-secondary btn-sm">+</button>
+                <button style={this.styles} onClick={() => this.props.onDelete(this.props.id)} className="btn btn-danger btn-sm m-2">Delete</button>
             </div> 
         );  
     }
-
-
-
 
 } 
  
