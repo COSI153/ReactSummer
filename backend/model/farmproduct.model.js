@@ -13,8 +13,14 @@ const farmproductSchema = new Schema({
     required: true
     },
     date: {
-    type:Date
+    type:String
+    },
+    // set database relationship, farmproduct belongs to a user
+    creator: {
+    type: mongoose.Types.ObjectId,
+    ref: 'User'
     }
+    
     
 },{
     timestamp: true,

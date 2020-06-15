@@ -1,10 +1,22 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+## Farm Cart App 
+ - Version 1.0 
+ - Description goes here
+ 
 
-In the project directory, you can run:
 
-### `yarn start`
+### Current working functions 
+
+Avaliable routes: 
+### signup/login/farmerlogin
+As we designed, usered are allowed to login in different roles. Farmer login allows users to add products. User login allow users to buy products. 
+
+### add products
+This should be the page for famrers to publish their products. 
+
+### add items to shpping cart(in developing)
+This should be the page for users to add items to their wishlist/shopping cart
 
 Runs the app in the development mode.<br />
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.

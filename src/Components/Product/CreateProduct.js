@@ -1,20 +1,20 @@
 import React, { Component } from 'react'
-
+import axios from 'axios'
 class CreateProduct extends Component {
     constructor(props) {
         super(props);
         this.onChangeName = this.onChangeName.bind(this);
         this.onChangeDescription = this.onChangeDescription.bind(this);
+        this.onSubmit = this.onSubmit.bind(this);
 
         this.state = {
             name: '',
             description: ''
         }
     }
-
     componentDidMount() {
         this.setState({
-            user: ['test user']
+            user: ['']
         })
     }
 
@@ -35,40 +35,46 @@ class CreateProduct extends Component {
             name: this.state.name,
             description: this.state.description
         }
+        console.log(product);
+
+        // send backend call( to local host)
+        axios.post('http://localhost:5000/farmproducts/add', product)
+         .then(res => console.log(res.data));
+
          window.location = '/';
     }
     
     render() {
         return (
             <div>
-            <div class="project">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-md-8 m-auto">
-                            <h5 class="display-4 text-center">Create Product form</h5>
+            <div className="project">
+                <div className="container">
+                    <div className="row">
+                        <div className="col-md-8 m-auto">
+                            <h5 className="display-4 text-center">Create Product form</h5>
                             <hr />
                             <form onSubmit={this.onSubmit}>
-                                <div class="form-group">
-                                    <input type="text" class="form-control form-control-lg " placeholder="Product Name" />
+                                <div className="form-group">
+                                    <input type="text" className="form-control form-control-lg "
+                                     placeholder="Product Name" 
+                                     value={this.state.name}
+                                     onChange={this.onChangeName}/>
                                 </div>
-                                <div class="form-group">
-                                    <input type="text" class="form-control form-control-lg" placeholder="Unique Product ID"
-                                        disabled />
-                                </div>
+                             
                             
-                                <div class="form-group">
-                                    <textarea class="form-control form-control-lg" placeholder="Product Description"></textarea>
+                                <div className="form-group">
+                                    <textarea className="form-control form-control-lg" placeholder="Product Description"
+                                     value={this.state.description}
+                                     onChange={this.onChangeDescription}
+                                    ></textarea>
                                 </div>
-                                <div class="form-group">
-                                    <textarea class="form-control form-control-lg" placeholder="Product Location"></textarea>
-                                </div>
+                               
                                 <h6>Produced Date</h6>
-                                <div class="form-group">
-                                    <input type="date" class="form-control form-control-lg" name="start_date" />
+                                <div className="form-group">
+                                    <input type="date" className="form-control form-control-lg" name="start_date" />
                                 </div>
-                            
 
-                                <input type="submit" class="btn btn-primary btn-block mt-4" />
+                                <input type="submit" className="btn btn-primary btn-block mt-4" />
                             </form>
                         </div>
                     </div>

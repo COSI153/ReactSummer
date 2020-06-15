@@ -2,8 +2,10 @@ import React, { Component } from 'react'
 import PropTypes from 'prop-types';
 import Product from '../Product/Product';
 import './ProductList.css';
+import axios from 'axios';
 
 const ProductList = ({data}) => {
+    
     return (
      <div className='flex-container'>
        {data.map(product => (
