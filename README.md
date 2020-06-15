@@ -12,6 +12,14 @@ As we designed, usered are allowed to login in different roles. Farmer login all
 ### add products
 This should be the page for famrers to publish their products. 
 
+<b style='color:red'> 6/14/2020 Jae  </b> </br>
+if you type info about a product, it shows up on landing page.
+very buggy right now. 
+1) use lower characters only 
+2) due to limited available images, add only "apple, pineapple, watermellon"
+3) if you click "clear data" button, stored data in local storage is deleted.
+
+
 ### add items to shpping cart(in developing)
 This should be the page for users to add items to their wishlist/shopping cart
 
